@@ -1,0 +1,35 @@
+{% extends 'base.html' %}
+
+{% block title %}Home{% endblock %}
+
+{% block content %}
+
+
+
+  
+
+
+  <nav class="navbar navbar-inverse">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <a class="navbar-brand" href="#">Highways for drones </a>
+    </div>
+    <ul class="nav navbar-nav">
+      <li class="active"><a href="#">Home</a></li>
+      <li><a href="#">MAP</a></li>
+      <li><a href="#">LIVE FEED</a></li>
+    </ul>
+    {% if user.is_authenticated %}
+    <button a href="{% url 'logout' %}"class="btn btn-danger navbar-btn">logout</button>
+    {% else %}
+
+
+  </div>
+</nav>
+
+<div class="container">
+  <h2>cvam</h2>
+  <p></p>
+</div>
+{% endif %}
+{% endblock %}
